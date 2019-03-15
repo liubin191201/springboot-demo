@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bin.liu.springboot.demo.mapper.TsUserDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bin.liu.springboot.demo.entity.TsUser">
+        <id column="id" property="id" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="name" property="name" />
+        <result column="icon" property="icon" />
+        <result column="sex" property="sex" />
+        <result column="login_ip" property="loginIp" />
+        <result column="login_date" property="loginDate" />
+        <result column="level" property="level" />
+        <result column="point" property="point" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, create_date AS createDate, modify_date AS modifyDate, name, icon, sex, login_ip AS loginIp, login_date AS loginDate, level, point
+    </sql>
+
+</mapper>
