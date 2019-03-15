@@ -13,9 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @ComponentScan(basePackages = {"com.bin.liu.springboot.demo"})
-@MapperScan("com.bin.liu.springboot.demo.mapper")
+@MapperScan(basePackages = {"com.bin.liu.springboot.demo.mapper"})
 @EnableAutoConfiguration
-//@SpringBootConfiguration
 public class WebApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
