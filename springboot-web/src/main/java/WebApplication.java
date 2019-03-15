@@ -1,4 +1,3 @@
-import org.apache.ibatis.annotations.Mapper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -13,8 +12,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @ComponentScan(basePackages = {"com.bin.liu.springboot.demo"})
-@MapperScan(basePackages = {"com.bin.liu.springboot.demo.mapper"})
-@EnableAutoConfiguration
+@MapperScan("com.bin.liu.springboot.demo.mapper")
+@EnableAutoConfiguration()
 public class WebApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
