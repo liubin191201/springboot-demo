@@ -189,9 +189,13 @@
 
         </dependencies>
     </dependencyManagement>
+
     <profiles>
         <profile>
             <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <modules>
                 <module>springboot-common</module>
                 <module>springboot-entity</module>
@@ -200,13 +204,49 @@
                 <module>springboot-web</module>
             </modules>
             <properties>
-
+                <server.port>8080</server.port>
+                <server.servlet.context-path>/web</server.servlet.context-path>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <modules>
+                <module>springboot-common</module>
+                <module>springboot-entity</module>
+                <module>springboot-repo</module>
+                <module>springboot-service</module>
+                <module>springboot-web</module>
+            </modules>
+            <properties>
+                <server.port>8080</server.port>
+                <server.servlet.context-path>/web</server.servlet.context-path>
             </properties>
         </profile>
     </profiles>
 
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                </includes>
+                <!-- 加入此属性，才会进行过滤 -->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
