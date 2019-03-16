@@ -15,7 +15,7 @@ import org.springframework.context.annotation.PropertySource;
 @ComponentScan(basePackages = {"com.bin.liu.springboot.demo"})
 @MapperScan("com.bin.liu.springboot.demo.mapper")
 @EnableAutoConfiguration()
-@PropertySource(value = {"classpath:web.application.properties","classpath:service.application.properties","classpath:dao.application.properties","classpath:entity.application.properties","classpath:common.application.properties"},ignoreResourceNotFound = true,encoding = "utf-8")
+@PropertySource(value = {"classpath:application.properties","classpath:service.application.properties","classpath:dao.application.properties","classpath:entity.application.properties","classpath:common.application.properties"},ignoreResourceNotFound = true,encoding = "utf-8")
 public class WebApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
