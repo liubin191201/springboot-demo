@@ -24,7 +24,7 @@ import javax.servlet.Filter;
 @MapperScan("com.bin.liu.springboot.demo.mapper")
 @EnableAutoConfiguration()
 @PropertySource(value = {"classpath:application.properties","classpath:service.application.properties","classpath:dao.application.properties","classpath:entity.application.properties","classpath:common.application.properties"},ignoreResourceNotFound = true,encoding = "utf-8")
-//filterscan
+//扫描filter,listener,interceptor
 @ServletComponentScan
 public class WebApplication {
     public static void main(String[] args) {
