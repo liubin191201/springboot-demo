@@ -1,6 +1,5 @@
 import com.bin.liu.springboot.demo.filter.Custom2Filter;
 import com.bin.liu.springboot.demo.filter.Custom3Filter;
-import com.bin.liu.springboot.demo.filter.CustomFilter;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -8,6 +7,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
 
 import javax.servlet.Filter;
@@ -23,9 +23,11 @@ import javax.servlet.Filter;
 @ComponentScan(basePackages = {"com.bin.liu.springboot.demo"})
 @MapperScan("com.bin.liu.springboot.demo.mapper")
 @EnableAutoConfiguration()
-@PropertySource(value = {"classpath:application.properties","classpath:service.application.properties","classpath:dao.application.properties","classpath:entity.application.properties","classpath:common.application.properties"},ignoreResourceNotFound = true,encoding = "utf-8")
+@PropertySource(value = {"classpath:application.properties","classpath:service.application.properties","classpath:dao.application.properties", "classpath:entity.application.properties","classpath:common.application.properties"},ignoreResourceNotFound = true,encoding = "utf-8")
 //扫描filter,listener,interceptor
 @ServletComponentScan
+//引入资源文件，入spring配置文件
+//@ImportResource(locations = {})
 public class WebApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
