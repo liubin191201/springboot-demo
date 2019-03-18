@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bin.liu.springboot.demo</groupId>
-    <artifactId>springboot-service</artifactId>
+    <artifactId>springboot-activemq</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+
 
     <parent>
         <groupId>com.bin.liu.springboot.demo</groupId>
@@ -14,30 +14,15 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
     <dependencies>
-        <!--本地项目-->
         <dependency>
             <groupId>com.bin.liu.springboot.demo</groupId>
             <artifactId>springboot-common</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.bin.liu.springboot.demo</groupId>
-            <artifactId>springboot-entity</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.bin.liu.springboot.demo</groupId>
-            <artifactId>springboot-repo</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.bin.liu.springboot.demo</groupId>
-            <artifactId>springboot-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.bin.liu.springboot.demo</groupId>
-            <artifactId>springboot-activemq</artifactId>
-        </dependency>
-        <!--本地项目-->
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -50,6 +35,23 @@
             <scope>test</scope>
         </dependency>
 
-    </dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
+        </dependency>
 
+        <!--activemq-pool-->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-pool</artifactId>
+        </dependency>
+        <!--activemq-pool-->
+
+        <!--json-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <!--json-->
+    </dependencies>
 </project>

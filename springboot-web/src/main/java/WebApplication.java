@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.jms.annotation.EnableJms;
 
 import javax.servlet.Filter;
 
@@ -23,7 +24,9 @@ import javax.servlet.Filter;
 @ComponentScan(basePackages = {"com.bin.liu.springboot.demo"})
 @MapperScan("com.bin.liu.springboot.demo.mapper")
 @EnableAutoConfiguration()
-@PropertySource(value = {"classpath:application.properties","classpath:service.application.properties","classpath:dao.application.properties", "classpath:entity.application.properties","classpath:common.application.properties","classpath:redis.application.properties"},ignoreResourceNotFound = true,encoding = "utf-8")
+@PropertySource(value = {"classpath:application.properties","classpath:service.application.properties","classpath:dao.application.properties",
+        "classpath:entity.application.properties","classpath:common.application.properties","classpath:redis.application.properties","classpath:activemq.application.properties"},
+        ignoreResourceNotFound = true,encoding = "utf-8")
 //扫描filter,listener,interceptor
 @ServletComponentScan
 //引入资源文件，入spring配置文件
