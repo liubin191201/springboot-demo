@@ -40,6 +40,11 @@
             <groupId>com.bin.liu.springboot.demo</groupId>
             <artifactId>springboot-service</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.bin.liu.springboot.demo</groupId>
+            <artifactId>springboot-redis</artifactId>
+        </dependency>
+
         <!--本地项目-->
 
         <dependency>
