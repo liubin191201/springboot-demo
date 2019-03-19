@@ -10,6 +10,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 import javax.servlet.Filter;
 
@@ -63,6 +64,12 @@ public class WebApplication {
     @Bean
     public Filter custom3Filter(){
         return new Custom3Filter();
+    }
+
+
+    @Bean
+    public ServerEndpointExporter serverEndpointExporter(){
+        return new ServerEndpointExporter();
     }
 
 
