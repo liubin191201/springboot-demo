@@ -74,6 +74,7 @@ public class ActivemqConfig {
     public JmsListenerContainerFactory<?> jmsListenerContainerQueue(ActiveMQConnectionFactory connectionFactory){
         DefaultJmsListenerContainerFactory bean = new DefaultJmsListenerContainerFactory();
         bean.setConnectionFactory(connectionFactory);
+        bean.setReceiveTimeout(50000L);
         return bean;
     }
 

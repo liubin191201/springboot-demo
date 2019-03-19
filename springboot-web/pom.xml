@@ -19,7 +19,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <start-class>WebApplication</start-class>
+        <start-class>com.bin.liu.springboot.demo.WebApplication</start-class>
     </properties>
 
     <dependencies>

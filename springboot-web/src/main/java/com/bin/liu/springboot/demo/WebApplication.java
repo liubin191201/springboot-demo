@@ -1,3 +1,5 @@
+package com.bin.liu.springboot.demo;
+
 import com.bin.liu.springboot.demo.filter.Custom2Filter;
 import com.bin.liu.springboot.demo.filter.Custom3Filter;
 import org.mybatis.spring.annotation.MapperScan;
@@ -7,9 +9,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.jms.annotation.EnableJms;
 
 import javax.servlet.Filter;
 
