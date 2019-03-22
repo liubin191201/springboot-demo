@@ -10,6 +10,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 import javax.servlet.Filter;
@@ -32,6 +33,8 @@ import javax.servlet.Filter;
 @ServletComponentScan
 //引入资源文件，入spring配置文件
 //@ImportResource(locations = {})
+//定时
+@EnableScheduling
 public class WebApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);

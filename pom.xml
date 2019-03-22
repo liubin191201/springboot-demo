@@ -71,6 +71,15 @@
         <topic.testTopic.name>test_topic</topic.testTopic.name>
         <!--队列-->
 
+        <!--自定义线程池-->
+        <task_executor.corePoolSize>20</task_executor.corePoolSize>
+        <task_executor.maxPoolSize>2000</task_executor.maxPoolSize>
+        <task_executor.queueCapacity>25</task_executor.queueCapacity>
+        <task_executor.keepAliveSeconds>200</task_executor.keepAliveSeconds>
+        <task_executor.threadNamePrefix>bin_liu_scheduled-</task_executor.threadNamePrefix>
+        <task_executor.awaitTerminationSeconds>60</task_executor.awaitTerminationSeconds>
+        <!--自定义线程池-->
+
 
 
 
