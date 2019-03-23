@@ -36,6 +36,10 @@
             <groupId>com.bin.liu.springboot.demo</groupId>
             <artifactId>springboot-activemq</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.bin.liu.springboot.demo</groupId>
+            <artifactId>springboot-mail</artifactId>
+        </dependency>
         <!--本地项目-->
 
 

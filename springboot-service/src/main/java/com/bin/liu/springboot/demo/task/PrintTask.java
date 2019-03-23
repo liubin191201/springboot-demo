@@ -22,7 +22,7 @@ public class PrintTask {
     @Async(value = "scheduledPoolTaskExecutor")
     @Scheduled(cron = "*/5 * * * * ?")
     public void print(){
-        log.info("定时任务打印,当前次数:" + count);
+        //log.info("定时任务打印,当前次数:" + count);
         count++;
     }
 }
