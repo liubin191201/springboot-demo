@@ -87,6 +87,13 @@
         <spring.mail.properties.mail.smtp.auth>true</spring.mail.properties.mail.smtp.auth>
         <!--邮件配置-->
 
+        <!--mongo-->
+        <spring.data.mongodb.uri>mongodb://test:test@localhost:27017/test</spring.data.mongodb.uri>
+        <!--<spring.data.mongodb.username>test</spring.data.mongodb.username>-->
+        <!--<spring.data.mongodb.password>test</spring.data.mongodb.password>-->
+        <!--mongo-->
+
+
 
 
 
@@ -145,6 +152,11 @@
             <dependency>
                 <groupId>com.bin.liu.springboot.demo</groupId>
                 <artifactId>springboot-mail</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bin.liu.springboot.demo</groupId>
+                <artifactId>springboot-mongo</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
@@ -313,6 +325,7 @@
                 <module>springboot-redis</module>
                 <module>springboot-activemq</module>
                 <module>springboot-mail</module>
+                <module>springboot-mongo</module>
                 <module>springboot-web</module>
             </modules>
             <properties>
@@ -334,6 +347,7 @@
                 <module>springboot-redis</module>
                 <module>springboot-activemq</module>
                 <module>springboot-mail</module>
+                <module>springboot-mongo</module>
                 <module>springboot-web</module>
             </modules>
             <properties>

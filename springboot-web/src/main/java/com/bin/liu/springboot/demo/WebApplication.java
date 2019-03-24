@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.data.map.repository.config.EnableMapRepositories;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
@@ -29,7 +31,7 @@ import javax.servlet.Filter;
 @EnableAutoConfiguration()
 @PropertySource(value = {"classpath:application.properties","classpath:service.application.properties","classpath:dao.application.properties",
         "classpath:entity.application.properties","classpath:common.application.properties","classpath:redis.application.properties","classpath:activemq.application.properties",
-        "classpath:mail.application.properties"
+        "classpath:mail.application.properties","classpath:mongo.application.properties"
         },
         ignoreResourceNotFound = true,encoding = "utf-8")
 //扫描filter,listener,interceptor
@@ -40,6 +42,8 @@ import javax.servlet.Filter;
 @EnableScheduling
 //切面
 @EnableAspectJAutoProxy
+//mongo
+@EnableMongoRepositories(basePackages = "com.bin.liu.springboot.demo.mongo")
 public class WebApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
